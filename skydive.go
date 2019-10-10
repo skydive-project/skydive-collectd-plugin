@@ -278,7 +278,7 @@ func SkydivePluginConfig(ci *C.oconfig_item_t) C.int {
 	}
 
 	authOpts := &shttp.AuthenticationOpts{
-		Username: username,
+		Username: username+"",
 		Password: password,
 	}
 
