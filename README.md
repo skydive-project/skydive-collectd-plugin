@@ -28,16 +28,20 @@ LoadPlugin skydive
 
 The address has to be the Skydive Agent `listen` address.
 
+## Get involved
+
+* Weekly meeting
+    * [General - Weekly Hangout meeting](https://hangouts.google.com/call/TVzTtJpcW6BhSRhXgQNBAEEI) - every Thursday at 10:30 - 11:30 AM CEST
+    * [Minutes](https://docs.google.com/document/d/1eri4vyjmAwxiWs2Kp4HYdCUDWACF_HXZDrDL8WcPF-o/edit?ts=5d946ad5#heading=h.g8f8gdfq0un9)
+
+* Slack
+    * https://skydive-project.slack.com
+
 ## Contributing
 
 Your contributions are more than welcome. Please check
 https://github.com/skydive-project/skydive/blob/master/CONTRIBUTING.md
 to know about the process.
-
-## Contact
-
-* IRC: #skydive-project on irc.freenode.net
-* Mailing list: https://www.redhat.com/mailman/listinfo/skydive-dev
 
 ## License
 
@@ -51,5 +55,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-
