@@ -5,15 +5,22 @@ Currently the metrics will reported on the `Host` node under the sub key `Collec
 
 # Installation
 
-Please first follow the [Skydive build](http://skydive.network/documentation/build) documentation
-in order to get Skydive sources installed properly, then :
+In order to compile the `Skydive Collectd plugin` one need to have the [Collectd sources](https://github.com/collectd/collectd).
 
 ```
-cd $GOPATH/contrib/collectd
+export COLLECTD_SRC=/tmp/collectd
+
+git clone https://github.com/collectd/collectd $COLLECTD_SRC
+
+mkdir -p $GOPATH/src/github.com/skydive-project
+git clone https://github.com/skydive-project/skydive-collectd-plugin.git \
+  $GOPATH/src/github.com/skydive-project/skydive-collectd-plugin
+cd $GOPATH/src/github.com/skydive-project/skydive-collectd-plugin
+
 make
 ```
 
-This will generate a shared object that can be placed in the collectd plugin folder.
+This will generate a shared object (`skydive.so`) that can be placed in the collectd plugin folder.
 
 # Configuration
 
