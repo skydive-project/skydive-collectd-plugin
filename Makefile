@@ -3,8 +3,9 @@ SKYDIVE_GO_MOD?=$(shell curl -o /tmp/skydive.go.mod -L https://raw.githubusercon
 
 .PHONY: .go.mod
 .go.mod:
-	sed -i '/replace ( # GENERATED/,/)/d' go.mod
-	sed -n '/replace (/,/)/p' /tmp/skydive.go.mod | sed -e 's/replace (/replace ( # GENERATED/' >> go.mod
+	sed -i '/replace ( \/\/ GENERATED/,/)/d' go.mod
+	sed -n '/replace (/,/)/p' ${SKYDIVE_GO_MOD} | sed -e 's/replace (/replace ( \/\/ GENERATED/' >> go.mod
+	cat go.mod
 
 collectd: .go.mod
 	CGO_CFLAGS="-I${COLLECTD_SRC}/src/ -I${COLLECTD_SRC}/src/daemon" go build -o skydive.so -tags collectd -buildmode=c-shared skydive.go logging.go
